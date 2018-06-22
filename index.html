@@ -3,6 +3,7 @@
 	<title></title>
 	<script type="text/javascript" src="starfield.js"></script>
 	<script src = 'js/starfield.js'></script>
+	<link href = 'css/index.css' rel = 'stylesheet'>
 	<style type="text/css">
 	html, body {
 		margin: 0px;
@@ -17,7 +18,59 @@
 	</style>
 </head>
 <body>
+	<div class = 'loader' data-src = 'http://nickzack.space/wp-content/uploads/2018/06/spaceloader2.gif'></div>
 <canvas id="canvas" width="100%" height="100%"></canvas>
+<div class = 'video-info'>
+<div class = 'intro-header'>
+<h2>Welcome to </h2>
+<h1><span class = 'blue'>N</span>ick<span class = 'blue'>Z</span>ack.space</h1>
+</div>
+<div class = 'button-container'>
+     <a class = 'say-hi-popup'><span class = 'text'>Say Hi!</span><span class = 'icon'><i class="fa fa-comment"></i></span></a>
+     <a class = 'view-portfolio'><span class = 'text'>View Portfolio</span><span class = 'icon'><i class="fa fa-space-shuttle"></i></span></a>
+</div>
+</div>
+</div>
+
+<div class = 'blue-planet'>
+<img src="/images/blue-planet.svg" scale="0">
+</div>
+
+
+<div class="portfolio-container">
+<div class = 'exit-popup'><i class ='fa fa-chevron-up'></i></div>
+<div class="header">
+<h2>Check out some of my work.</h2>
+</div>
+<div class="left-box">
+<div class="portfolio-button"><a href = '/website-portfolio/'>View Websites</a></div>
+</div>
+<div class="right-box">
+<div class="portfolio-button"><a href="/vue-intro/vueIndex.html">View Web Apps</a></div>
+</div>
+</div>
+
+<img src = '/images/spacefarm4.png' class = 'blastoff-image'>
+<img src = '/images/spacefarm5.png' class = 'telescope-image'>
+<img src = '/images/mainplanet.png' class = 'main-planet-image'>
+<img src = '/images/spacefarm6.png' class = 'landing-image'>
+
+
+<script type="text/javascript">
+
+$(".view-portfolio").click(function(){
+if(!$(".planet-image").hasClass("rotated")){
+$(".planet-image").addClass("planet-image-rotate-to-space-landing");
+$(".planet-image").addClass('rotated');
+}
+else{
+$(".planet-image").removeClass('rotated');
+$(".planet-image").removeClass("planet-image-rotate-to-space-landing");
+}
+});
+
+ </script>
+
 </body>
 
 

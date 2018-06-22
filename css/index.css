@@ -1,0 +1,816 @@
+html {
+    overflow: hidden !important;
+}
+canvas {
+    height: 100vh;
+}
+.video-info {
+    position: absolute;
+    width: 75%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+
+    top:0px;
+}
+
+.intro-slider .button-container {
+    margin-top: 25px;
+    margin-left: 80px;
+}
+
+.intro-slider a {
+    background-color: white;
+    color: black !important;
+    font-weight: 600;
+    padding: 15px 40px;
+}
+
+.intro-slider a:nth-child(2) {
+}
+
+.intro-slider h2,.intro-slider h1,.intro-slider a {
+    color: white;
+}
+
+.intro-slider {
+    position: relative;
+}
+
+.intro-slider h1 .blue {
+    color: #6661ca;
+}
+.intro-slider {
+    position: relative;
+    top: -100px;
+}
+
+.header_bottom {
+    background-color: transparent !important;
+}
+.planet-image {
+    position: absolute !important;
+    width: 100%;
+    top: 65%;
+    height: 100%;
+    width: 100%;
+}
+
+
+.blastoff-image {
+    position: absolute;
+    z-index: 9999;
+    top: -10%;
+    left: 15%;
+    transform: rotateZ(-10deg);
+}
+
+.main-planet-image {
+    position: relative;
+}
+
+.main-planet-image::before {
+      content: '';
+    position: absolute;
+    top: 0px;
+    left: 23.9%;
+    height: 136%;
+    width: 104%;
+    background-image: URL("/images/moonsurface.png");
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+}
+.pum-theme-11, .pum-theme-default-theme{
+    background-color:#00000054;
+}
+
+#popmake-65{
+    background-image:URL("http://nickzack.space/wp-content/uploads/2018/06/spaceman-1.png");
+    background-size:auto 100%;
+    background-position:right;
+    background-repeat:no-repeat;
+    background-color:black;
+}
+#gform_wrapper_1{
+    width:50%;
+}
+.video-info a{
+    background-color:transparent;
+    border:2px solid #54b4de;
+    color:#54b4de !important;
+    position:relative;
+
+}
+.landing-image{
+    position:absolute;
+    top:35%;
+    left:-43%;
+    transform:rotateZ(-100deg) scale(0.7);
+}
+
+
+/*button hover effects*/
+
+.button-container a {
+    position: relative;
+    color: white;
+    width: 256px;
+    height: 64px;
+    line-height: 64px;
+
+}
+
+.button-container a::before, .button-container a::after {
+    content: '';
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* BTN TWO */
+.button-container a::before, .button-container a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    border: 1px solid rgb(80, 168, 207);
+}
+
+.button-container a:hover::after {
+    animation-name: rotatecw;
+    animation-duration: 2s;
+}
+
+.button-container a:hover::before {
+    animation-name: rotateccw;
+    animation-duration: 3s;
+}
+
+.button-container a:hover::after, .button-container a:hover::before {
+    left: 35%;
+    width: 50px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.button-container .say-hi-popup:hover::after, .button-container .say-hi-popup:hover::before {
+    left: 30%;
+}
+
+@keyframes rotatecw {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.video-info a {
+    border: none;
+}
+
+.video-info{
+    transition:transform 0.55s ease;
+}
+
+
+
+.planet-image{
+    transition:transform 3s ease;
+}.telescope-image{
+    position:absolute;
+    display:none;
+}
+
+/* hover icons */
+.button-container .icon {
+    position: absolute;
+    top: 0px;
+    left: 48%;
+    top: 59%;
+    opacity: 0;
+}
+
+.text,.icon {
+    transition: transform 0.35s ease;
+    position: relative;
+}
+
+.button-container a:hover .text {
+    opacity: 0;
+}
+
+.button-container a:hover .icon {
+    opacity: 1;
+    transform:translateY(-38px) translateX(-5px);
+
+}
+
+/*menu animations */
+#menu-main-nav li a {
+    color: rgb(80, 168, 207) !important;
+
+}
+
+#menu-main-nav li a:hover {
+
+    letter-spacing: 10px;
+}
+
+#menu-main-nav li a span {
+    position: relative;
+    transition: width 0.66s ease;
+}
+
+#menu-main-nav li a span::after {
+    content: '\f197';
+    font-family: "FontAwesome";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 115%;
+
+    opacity: 0;
+}
+
+#menu-main-nav li a:hover span::after {
+
+    opacity: 1;
+}
+.button-container a::before, .button-container a::after { box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1); } .button-container a { color: rgba(0,170,170,01) !important; margin-left: 20px; }
+
+/* Blue planet come in from the side */
+.blue-planet {
+    position: absolute;
+    width: 100%;
+    left: 55%;
+    top: -20%;
+    transform: translateY(30%) rotate(250deg) translateX(-10%);
+    transition: transform 0.35s ease;
+}
+
+.blue-planet-move {
+    transition: transform 0.35s ease;
+    transform: translateY(30%) rotate(235deg) translateX(-10%);
+/*     left: 40%;
+    top: -20%; */
+}
+
+
+
+.portfolio-container {
+    border: 2px solid;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+/*portfolio popup*/
+.portfolio-container {
+    background-color: transparent;
+    width: 60%;
+    top: 10% !important;
+    box-shadow: none;
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+.portfolio-container {
+    display: none;
+}
+
+.portfolio-container h2,.portfolio-container a {
+    color: white;
+}
+
+.portfolio-container {
+    display: flex;
+}
+
+.portfolio-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.portfolio-button a {
+    border: 1px solid rgb(80, 168, 207);
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    width: 50% !important;
+    text-align: center !important;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.55s ease;
+    background-color: transparent;
+    color: rgb(80, 168, 207) !Important;
+}
+
+.portfolio-container h2 {
+    font-size: 20px;
+    text-transform: none;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+
+
+
+.exit-popup {
+    position: absolute;
+    top: 0px;
+    width: 98%;
+    float: right;
+    text-align: right;
+    color: rgb(80, 168, 207);
+    font-size: 20px;
+    z-index: 9999 !Important;
+    top: 10%;
+
+}
+
+.exit-popup::after {
+    content: 'exit';
+    font-size: 10px;
+    display: block;
+    position: relative;
+    top: -10px;
+    left: -2px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.exit-popup:hover {
+    transition: transform 0.35s ease;
+    cursor: pointer !important;
+    transform: translateY(-5px)
+}
+
+.exit-popup:hover::after {
+    opacity: 1;
+}
+
+.portfolio-container{
+    display:none;
+}
+
+/*main title fade out on button click */
+.video-info-fade-left {
+    transition:opacity 0.55s ease,transform 0.55s ease;
+    transform:translateX(-200px);
+    opacity:0;
+}
+.portfolio-container {
+    z-index: 999999999;
+    display: flex;
+}
+
+.portfolio-container .left-box,.portfolio-container .right-box {
+    width: 50%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.portfolio-container a:hover {
+    box-shadow: inset 0 0 4em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+}
+.portfolio-container {
+    display: none ;
+}
+
+/*MEDIA QUERIES MOBILE MOBILE RESPONSIVENESS */
+
+@media(min-width: 1700px) {
+    .blastoff-image {
+        top:-8%;
+        left: 20%;
+    }
+}
+
+@media(max-width: 1300px) {
+    .blastoff-image {
+        top:-12%;
+    }
+}
+
+@media(max-width: 1100px) {
+    .blastoff-image {
+        top:-15%;
+        left: 5%
+    }
+}
+
+@media(max-width: 1000px) {
+    .blastoff-image {
+        top:-20%;
+        left: 0%;
+        transform: scale(0.8) rotateZ(-20deg);
+    }
+}
+
+@media(max-width: 767px) {
+    .blastoff-image {
+        top:-25%;
+        left: -10%;
+        transform: scale(0.8) rotateZ(-20deg);
+    }
+}
+
+canvas {
+    height: 110vh !important;
+}
+
+@media(max-width: 630px) {
+    .landing-image {
+        display:none;
+    }
+
+    .rotated .landing-image {
+        display: inline;
+    }
+
+    .rotated .blastoff-image {
+        display: none;
+    }
+}
+
+@media(max-width: 530px) {
+    .intro-slider .button-container {
+        margin-left:0px;
+        width: 100%;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+
+    .video-info {
+        width: 100%;
+        left: -10px;
+    }
+
+    .video-info h2,.video-info h1 {
+        text-align: center;
+    }
+}
+
+.planet-image-rotate-to-space-landing {
+    transform: rotateZ(90deg) translateX(15%) translateY(-45%);
+    top: 70%;
+}
+
+@media(min-width: 1700px) {
+    .landing-image {
+        left:-33%;
+        top: 45%;
+        transform: rotateZ(-110deg) scale(0.8)
+    }
+
+    .blastoff-image {
+        transform: scale(1.3) rotateZ(-15deg);
+        top: -5%;
+    }
+}
+
+@media(max-width: 900px) {
+    .button-container a {
+        display:block;
+        padding: 0px;
+        margin-top: 20px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .button-container .text {
+        left: -5px;
+    }
+
+    .button-container a:nth-child(1) .icon {
+        left: 38% !important;
+        top: 0% !important;
+    }
+
+    .button-container a:nth-child(2) .icon {
+        left: 42% !important;
+        top: 0% !important;
+    }
+
+    .button-container a:nth-child(1) {
+        margin-top: 0px;
+    }
+
+    .button-container {
+        margin-left: 50px !important;
+    }
+}
+
+
+#gform_wrapper_1 input,#gform_wrapper_1 textarea {
+    color: rgba(0,170,170,1);
+    ; }
+
+@media(max-width: 600px) {
+    #popmake-65 {
+        left:5% !important;
+        width: 90% !important;
+        background-size: 45% auto;
+        background-position: bottom right;
+    }
+
+    #gform_wrapper_1 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #popmake-65 .pum-close {
+        left: 89%;
+        top: 0%;
+        transform: scale(0.7);
+    }
+
+    .gform_footer {
+        width: 60% !important;
+    }
+}
+
+@media(max-width: 530px) {
+    .video-info {
+        top:-50px;
+    }
+
+    .button-container {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-container {
+        width: 75%;
+        left: 12.5%;
+        padding-top: 0px;
+        padding-bottom: 12px;
+        top: 2.5% !important;
+    }
+
+    .portfolio-container .right-box,.portfolio-container .left-box {
+        width: 100%;
+    }
+
+    .rotated {
+        transform: initial;
+    }
+
+    .planet-image {
+        transform: scale(1.4) translateY(10%);
+    }
+
+    .blastoff-image {
+        transform: scale(1) rotateZ(-15deg) translateY(25px);
+    }
+
+    .landing-image {
+        top: -25%;
+        left: -15%;
+        transform: rotateZ(-15deg) scale(0.7);
+    }
+
+    .exit-popup {
+        top: 20%;
+    }
+
+    .blue-planet-move {
+        top: 25%;
+        }
+
+    .blue-planet-move img {
+        transform: scale(2)
+    }
+
+    .rotated .blastoff-image {
+        transition: all 1s ease !important;
+        opacity: 0 !important;
+    }
+}
+
+
+
+/* form popup */
+div#popmake-65 {
+    border: 2px solid rgba(0,170,170,0.5);
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+}
+
+#popmake-65 .pum-close {
+    border: 2px solid rgba(0,170,170,0.5);
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+    border-radius: 10%;
+    position: absolute;
+    top: 15px;
+    left: 90%;
+}
+
+div#popmake-65 label {
+    display: none;
+}
+
+#gform_submit_button_1 {
+    border: 2px solid rgba(0,170,170,1);
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+    color: rgba(0,170,170,1);
+    width: 100%;
+    text-align: center;
+}
+
+#gform_submit_button_1:hover {
+    background-color: transparent;
+    border-top-right-radius: 35% !important;
+
+}
+
+.gform_footer {
+    width: 45% !Important;
+    position: relative;
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+    margin-top:40px !Important;
+
+}
+
+.gform_footer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: URL("http://nickzack.space/wp-content/uploads/2018/06/lilguy.png");
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    background-size: 20%;
+    z-index: -2;
+    transform: rotateZ(20deg);
+    transition:transform 0.35s ease;
+   top: 50%;
+    left: 62%;
+}
+
+.gform_footer:hover::after {
+   transform:rotateZ(20deg) translateY(-29px) translateX(38px);;
+    opacity: 1;
+}
+
+.gform_footer::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.gform_footer:hover::before {
+    border-radius: 35%;
+}
+div#popmake-65 input,div#popmake-65 textarea{
+    background-color:transparent;
+        border: 2px solid rgba(0,170,170,0.5);
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+
+
+}
+div#popmake-65 input:focus,div#popmake-65 textarea:focus{
+   border: 2px solid rgba(0,170,170,1);
+   border-radius:5px;
+}
+div#popmake-65 input::placeholder,div#popmake-65 textarea::placeholder{
+    color:rgba(0,170,170);
+
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: URL("/images/spaceloader2.gif");
+    z-index: 999999999;
+    background-size: auto auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #4e3d66;
+}
+@media(max-width: 900px) {
+    .icon {
+        transform:initial !important;
+    }
+}
+
+@media(max-width: 530px) {
+    .blastoff-image {
+        transform:scale(0.8) rotateZ(-15deg) translateY(0px);
+    }
+
+    .planet-image-rotate-to-space-landing {
+        transition: all 0.55s ease;
+        transform: scale(1.4) translateY(13%);
+    }
+    .portfolio-container .left-box, .portfolio-container .right-box {
+        height:auto;
+    }
+
+    .portfolio-container .header {
+        padding-top: 20px;
+    }
+
+    .portfolio-container {
+        top: 145px !Important;
+        box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,1);
+    }
+
+    .portfolio-container:hover {
+        transition: background-color 0.35s ease;
+        background-color: rgba(3, 70, 70, 0.1);
+    }
+
+    .blue-planet-move {
+        transform: rotateZ(220deg) translateY(80px) translateX(-120px);
+    }
+}
+
+
+
+header.scroll_header_top_area.regular.page_header{
+    z-indeX:-1;
+}
+.wpb_single_image.wpb_content_element.vc_align_center.telescope-image {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    left: 35%;
+    transform: scale(0.5);
+    top: -100px;
+}
+
+.rotated {
+}
+
+@media(max-width: 1100px) {
+    .telescope-image {
+        left:25% !important;
+    }
+}
+
+@media(max-width: 767px) {
+    .telescope-image {
+        left:15% !important;
+    }
+}
+
+@media(max-width: 600px) {
+    .telescope-image {
+        left:5% !important;
+        top: -75px !important;
+    }
+}
+
+a::after,a::before {
+    transition: all 0.35s ease !important;
+}
+
+@media(min-width: 530px) and (max-width:575px) {
+    .rotated {
+        transform: rotateZ(90deg) translateX(-30%) translateY(17.5%);
+        top: 70%;
+    }
+
+    .landing-image {
+        top: 10%;
+        left: -75%;
+        transform: rotateZ(-100deg) scale(0.5);
+    }
+}
