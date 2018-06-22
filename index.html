@@ -4,6 +4,7 @@
 	<script type="text/javascript" src="starfield.js"></script>
 	<script src = 'js/starfield.js'></script>
 	<link href = 'css/index.css' rel = 'stylesheet'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
 	html, body {
 		margin: 0px;
@@ -70,6 +71,38 @@ $(".planet-image").removeClass("planet-image-rotate-to-space-landing");
 });
 
  </script>
+
+ <script>
+ //loader $wp_scripts
+
+ $(window).load(function(){
+   $(".loader").hide();
+   $("header.scroll_header_top_area.regular.page_header").css({"zIndex":"99999"})
+ });
+
+
+ //portfolio animations side down blue planet move
+ $(".view-portfolio").click(function(){
+
+ $(".video-info").addClass("video-info-fade-left");
+ $(".blue-planet").addClass("blue-planet-move");
+ setTimeout(function(){
+ $(".portfolio-container").slideDown();
+ },850);
+ });
+
+ $(".exit-popup").click(function(){
+ $(".portfolio-container").slideUp();
+ $(".video-info").removeClass("video-info-fade-left");
+ $(".blue-planet").removeClass("blue-planet-move");
+ $(".planet-image").removeClass('rotated');
+ $(".planet-image").removeClass("planet-image-rotate-to-space-landing");
+ });
+
+
+
+
+</script>
 
 </body>
 
